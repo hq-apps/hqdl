@@ -1,0 +1,50 @@
+{
+    "latest": "1.3",
+    "latestURL": "https://cdn.discordapp.com/attachments/982673006042169344/990233867661238302/saffari.apk",
+    "channels": {
+        "stable": {
+            "name": "Saffari for androd",
+            "description": "De originel Saffari! Itz susport tebs settiing favs history passwds and more! Androd 5plis nedend!!!",
+            "url": "https://saffari.tk",
+            "latest": "1.3",
+            "latestURL": "https://cdn.discordapp.com/attachments/982673006042169344/990233867661238302/saffari.apk",
+            "versions": {
+                "1.3": "https://cdn.discordapp.com/attachments/982673006042169344/990233867661238302/saffari.apk",
+                "1.2.1": "https://cdn.discordapp.com/attachments/982673006042169344/986329407331373126/saffari.apk",
+                "1.2": "https://cdn.discordapp.com/attachments/982673006042169344/986295893651230740/saffari.apk",
+                "1.1.1": "https://cdn.discordapp.com/attachments/982673006042169344/982696364913864764/saffari.apk",
+                "1.1": "https://cdn.discordapp.com/attachments/982673006042169344/982686643242803271/saffari.apk",
+                "1.0": ""
+            }
+        },
+        "sfrdesktop": {
+            "name": "Saffari for Decstopp",
+            "description": "DA SAFFARI FOR DECSTOPP! YES u haerd korrktly ! we mak decsktoppp edittion of da saffri epp! Reaslis cummink suun!!",
+            "url": "https://github.com/E-Codz/saffari-for-desktop",
+            "latest": "",
+            "latestURL": "",
+            "versions": {}
+        },
+        "legacy": {
+            "name": "Saffari for androd legacy",
+            "description": "the Saffari for androd fro androd 4!! itz haz less feature and less updat butt itz aviable for andord 4 orr olda!",
+            "url": "https://saffari.tk",
+            "latest": "1.0.1",
+            "latestURL": "https://cdn.discordapp.com/attachments/982673006042169344/992084977581817896/saffari.apk",
+            "versions": {
+                "1.0.1": "https://cdn.discordapp.com/attachments/982673006042169344/992084977581817896/saffari.apk",
+                "1.0": "https://cdn.discordapp.com/attachments/982673006042169344/990235637615587328/saffari.apk"
+            }
+        },
+        "notz": {
+            "name": "Notz",
+            "description": "NOTZ! de quikk and esyy not takink epplikation!! itz 100% lokal AND private !! No datat sent anyweree and no intrenett rekwired!",
+            "url": "https://hqapps.tk/notz",
+            "latest": "1.0",
+            "latestURL": "https://cdn.discordapp.com/attachments/982673006042169344/995336250993152020/notz.apk",
+            "versions": {
+                "1.0": "https://cdn.discordapp.com/attachments/982673006042169344/995336250993152020/notz.apk"
+            }
+        }
+    }
+} 

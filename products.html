@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+
+    <script>
+        const list = document.querySelector("#list")
+        async function get() {
+            const response = await fetch('/updates.json');
+            const data = await response.json();
+            Object.getOwnPropertyNames(data.channels).forEach(e => {
+                const name = Object.getOwnPropertyDescriptor(data.channels, e).value.name
+                const el = document.createElement("li")
+                el.innerHTML = `<input type="checkbox" name="${e}">${name}`
+                list.appendChild(el)
+                console.log(name)
+            });
+            const boxes = document.querySelectorAll('ul input');
+            boxes.forEach(e => {
+                e.addEventListener("click", update)
+            })
+            return data
+        }
+
+        function update() {
+            const boxes = document.querySelectorAll('ul input');
+            let toInstall = [];
+            boxes.forEach(e => {
+                if(e.checked) {
+                    toInstall.push(e.name)
+                }
+            });
+            console.log(toInstall.toString())
+            window.AppInventor.setWebViewString(toInstall.toString())
+        }
+
+        get();
+    </script>
+</body>
+</html>

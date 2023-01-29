@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Blaka&family=Orbitron:wght@900&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffari DOWNLUD!!!</title>
+    <style> main {margin-left: 25%}
+        .nice
+        {animation: nice 100ms infinite alternate}
+        @keyframes nice {from {
+        color: black;}
+        to{color: red;}}
+        .red {
+          background-color: red;
+          color: yellow;
+          font-size: large;
+          position: sticky;
+          top: 0;
+          font-family: 'Anton', sans-serif;
+        }
+        button{font-family: 'Press Start 2P', cursive;}
+        h1 {
+          position: sticky;
+          font-size: 3em;
+          top: 20px;
+          font-family: 'Blaka', cursive;
+          background-color: red;
+          color: white;
+          margin-right: 5%;
+          margin-left: 1%;
+        }
+        section {
+          display: flex;
+          flex-direction: row;
+        }
+        .other {
+          flex-direction: row-reverse;
+        }
+        img {
+          width: 25%;
+          
+        }body {
+          background-color: black;
+        color: white;}
+        a {
+          color: aqua;
+          }
+          button a {
+          color: blue;
+          }
+        </style>
+</head>
+<body>
+    <h1 id="thx">THX FOR DOWNLUFD OUR EPP!!</h1>
+    <img src="/like.png" alt="">
+    <a href="alert('OH NO ERRER')" download="true" id="dl">clickk hre if dl not srats</a>
+    <div><button><a id="back" href="https://hqapps.tk"><-</a></button></div>
+    <script>
+        var ver = window.location.pathname.split("/")[2]
+        var ch = window.location.pathname.split("/")[1]
+        if (!ver) {
+          
+        fetch('/updates.json')
+        .then(response => response.json())
+        .then(data => {document.querySelector("#thx").innerHTML = "THX FOR DOWNLUFD "+Object.getOwnPropertyDescriptor(data.channels, ch).value.latest+"/ "+ ch + " BUI HQ APPS!!"
+        document.querySelector("#dl").href= Object.getOwnPropertyDescriptor(data.channels, ch).value.latestURL})
+        .then(() => document.querySelector("#dl").click());
+        } else {
+        document.querySelector("#thx").innerHTML = "THX FOR DOWNLUFD "+ver+"/"+ch+" SAFFARI!!"
+        fetch('/updates.json')
+        .then(response => response.json())
+        .then(data => document.querySelector("#dl").href= Object.getOwnPropertyDescriptor(Object.getOwnPropertyDescriptor(data.channels, ch).value.versions, ver).value  )
+        .then(() => document.querySelector("#dl").click());
+        }
+    </script>
+</body>
+</html>

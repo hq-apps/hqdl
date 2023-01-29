@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Blaka&family=Orbitron:wght@900&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HQAPPS DOWNLUD!!!</title>
+		<link
+	rel="stylesheet"
+	href="https://unpkg.com/xp.css"
+>
+		<style> main {margin-left: 25%}
+				.nice
+				{animation: nice 100ms infinite alternate}
+				@keyframes nice {from {
+				color: black;}
+				to{color: red;}}
+				.red {
+					background-color: red;
+					color: yellow;
+					font-size: large;
+					position: sticky;
+					top: 0;
+					font-family: 'Anton', sans-serif;
+				}
+				button{font-family: 'Press Start 2P', cursive;}
+				h1 {
+					position: sticky;
+					font-size: 3em;
+					top: 20px;
+					font-family: 'Blaka', cursive;
+					background-color: red;
+					color: white;
+					margin-right: 5%;
+					margin-left: 1%;
+				}
+
+				.other {
+					flex-direction: row-reverse;
+				}
+				img {
+					width: 25%;
+					
+				}
+                .tabs {
+                    max-width: none !important;
+                    width: 90%;
+                }
+
+				@media (max-width: 400px) {
+					menu[role=tablist] {
+						flex-wrap: nowrap;
+  						  flex-direction: column;
+					}
+				}
+
+				#downlod-window {
+					display: none;
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+					max-width: 99vw;
+				}
+
+				#dl-title {
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+
+				#dl-frame {
+					width: 500px;
+					max-width: 95vw;
+					height: 300px;
+				}
+
+				.maximized {
+					width: 100vw;
+					max-width: none !important;
+					height: 100vh;
+					top: 0 !important;
+					left: 0 !important;
+					transform: none !important;
+					border-radius: 0;
+				}
+				.maximized .title-bar {
+					border-radius: 0;
+				}
+
+				.maximized .window-body, .maximized .window-body iframe {
+					width: 100% !important;
+					max-width: none !important;
+					height: 100% !important;
+					margin: 0;
+					padding: 0;
+				}
+        body {
+        background-color: black;
+      color: white;}
+      [role="tabpanel"] {
+      background: rgb(0, 0, 0) !important;
+    }
+    a {
+    color: aqua;
+    }
+    button a {
+    color: blue;
+    }
+				</style>
+</head>
+<body>
+		<h1 id="thx">HQ APPS DOWNLD OFFICAL INFASTRUCTRE!!!</h1>
+    <img src="/icon.png" alt="uor cool icen!">
+		<h2>HEY! u need to slect ur edition of saffari to cintonune!</h2>
+		<p>the optins r:</p>
+		<section class="tabs" style="max-width: 500px" id="tabs">
+				<menu role="tablist" aria-label="optins!!" id="tablist"></menu>
+				<!-- the tab content -->
+		</section>
+
+		<div class="window" id="downlod-window">
+			<div class="title-bar" id="downlod-windowheader">
+			  <div class="title-bar-text" id="dl-title">Downlod nom - Internet Explorer</div>
+			  <div class="title-bar-controls">
+				<button aria-label="Help" onclick="
+				dl('help', '//support.microsoft.com/en-us/topic/error-opening-help-in-windows-based-programs-feature-not-included-or-help-not-supported-3c841463-d67c-6062-0ee7-1a149da3973b')"></button>
+				<button aria-label="Minimize" disabled style="opacity: 0.5;"></button>
+				<button aria-label="Maximize" onclick="max()"></button>
+				<button aria-label="Close" onclick="closedl()"></button>
+			  </div>
+			</div>
+			<div class="window-body">
+			  <iframe src="" frameborder="0" id="dl-frame"></iframe>
+			</div>
+		  </div>
+
+		<h2>OUR OFFICAKL WEBSITTE!</h2>
+		<a href="https://hqapps.tk/">https://hqapps.tk/</a>
+		<div><button><a id="back" href="https://saffari.tk"><-</a></button></div>
+
+		<script defer>
+								let list = document.querySelector("#tablist")
+const tabs = document.querySelector("#tabs")
+				async function get() {
+						const response = await fetch('/updates.json');
+						const data = await response.json();
+						Object.getOwnPropertyNames(data.channels).forEach(e => {
+								const name = Object.getOwnPropertyDescriptor(data.channels, e).value.name
+								const desc = Object.getOwnPropertyDescriptor(data.channels, e).value.description
+								const url = Object.getOwnPropertyDescriptor(data.channels, e).value.url
+								/*const el = document.createElement(`button`)
+								el.role = "tab"
+								el.innerHTML = `<input type="checkbox" name="${e}">${name}`
+								list.appendChild(el)*/
+                                let dlhtml = "";
+								const isSelected = window.location.hash == "#"+e
+                                Object.getOwnPropertyNames(Object.getOwnPropertyDescriptor(data.channels, e).value.versions).forEach(ver => {
+                                    dlhtml += `<h4>Versoin ${ver}!!1</h4><button onclick="dl('${name}', '/${e}/${ver}')">Downlod!</button>`
+                                })
+								list = document.querySelector("#tablist")
+								list.innerHTML += `<button role="tab" aria-controls="${e}" ${isSelected ? "aria-selected=true": ""}>${name}</button> `
+								tabs.innerHTML += `<article role="tabpanel" ${isSelected ? "" : "hidden"} id="${e}"><h3>Downnlodz for ${name}</h3><p>${desc}</p><p>URL: <a href="${url}">${url}</a></p>${dlhtml}</article>`
+								console.log(e)
+						});
+						addTab()
+						return data
+				}
+
+				function addTab() {
+
+				const tabs = document.querySelectorAll("menu[role=tablist]");
+
+for (let i = 0; i < tabs.length; i++) {
+	const tab = tabs[i];
+
+	const tabButtons = tab.querySelectorAll("menu[role=tablist] > button");
+
+	tabButtons.forEach((btn) =>
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+
+
+			tabButtons.forEach((button) => {
+				if (
+					button.getAttribute("aria-controls") ===
+					e.target.getAttribute("aria-controls")
+				) {
+					button.setAttribute("aria-selected", true);
+					openTab(e, tab);
+					history.pushState(null, null, "#"+e.target.getAttribute("aria-controls"));
+				} else {
+					button.setAttribute("aria-selected", false);
+				}
+			});
+		})
+	);
+}
+
+				}
+
+function openTab(event, tab) {
+	const articles = tab.parentNode.querySelectorAll('[role="tabpanel"]');
+	articles.forEach((p) => {
+		p.setAttribute("hidden", true);
+	});
+	const article = tab.parentNode.querySelector(
+		`[role="tabpanel"]#${event.target.getAttribute("aria-controls")}`
+	);
+	article.removeAttribute("hidden");
+
+}
+
+const dlwin = document.querySelector("#downlod-window")
+const dltitle = document.querySelector("#dl-title")
+const dlframe = document.querySelector("#dl-frame")
+
+function dl(name, url) {
+	dltitle.innerHTML = `Downlod ${name} - Internet Explorer`
+	dlwin.style.display = "block"
+	dlframe.src = url
+}
+
+function closedl() {
+	dlwin.style.display = "none"
+	dlframe.src = ""
+}
+
+function max() {
+	dlwin.classList.toggle("maximized")
+	if(dlwin.classList.contains("maximized")) {
+		stopDragElement(dlwin)
+		document.body.style.overflow = "hidden"
+	} else {
+		dragElement(dlwin)
+		document.body.style.overflow = "unset"
+	}
+}
+
+dragElement(dlwin);
+
+function stopDragElement(elmnt) {
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = null;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = null;
+  }
+}
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+get()
+			</script>
+</body>
+</html>
