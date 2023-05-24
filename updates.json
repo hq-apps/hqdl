@@ -45,6 +45,16 @@
             "versions": {
                 "1.0": "https://cdn.discordapp.com/attachments/982673006042169344/995336250993152020/notz.apk"
             }
+        },
+        "vibrator": {
+            "name": "Vibrator",
+            "description": "FUN!!!",
+            "url": "https://hqapps.org/apps/vibrator",
+            "latest": "1.0",
+            "latestURL": "https://cdn.discordapp.com/attachments/1082239768814948392/1110955326599082035/vibrator.apk",
+            "versions": {
+                "1.0": "https://cdn.discordapp.com/attachments/1082239768814948392/1110955326599082035/vibrator.apk"
+            }
         }
     }
 } 
