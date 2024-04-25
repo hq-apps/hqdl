@@ -56,5 +56,10 @@
                 "1.0": "https://cdn.hqapps.org/vibrator1.0.apk"
             }
         }
+    },
+    "byAndroidPkgName": {
+        "appinventor.ai_saffariteam.Browser": "stable",
+        "appinventor.ai_saffariteam.notz": "notz",
+        "appinventor.ai_saffariteam.vibrator": "vibrator"
     }
 } 
